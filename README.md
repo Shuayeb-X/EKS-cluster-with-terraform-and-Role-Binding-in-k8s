@@ -144,16 +144,16 @@ After creating the IAM service account:
 ```bash
 terraform apply -auto-approve
 ```
-Creating Cluster
+## Creating Cluster
 
 ![image alt ](https://github.com/Shuayeb-X/Mega-Capstone-Devops-CI-CD-Project/blob/22a037234fafe9fcafc0977fcaa98eedf44f14f9/creating%20cluster.png)
 
 
-Cluster created successfully
+## Cluster created successfully
 
 ![image alt ](https://github.com/Shuayeb-X/Mega-Capstone-Devops-CI-CD-Project/blob/22a037234fafe9fcafc0977fcaa98eedf44f14f9/cluster%20created.png)
 
-Verify EKS Cluster
+## Verify EKS Cluster
 
 ```bash
 aws eks list-clusters
@@ -161,7 +161,7 @@ aws eks list-clusters
 ![image alt](https://github.com/Shuayeb-X/Mega-Capstone-Devops-CI-CD-Project/blob/22a037234fafe9fcafc0977fcaa98eedf44f14f9/eks%20cluster.png)
 # 🔗 Configure kubectl
 
-install Kubectl
+## install Kubectl
 '''bash
  curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
  #Download the kubectl checksum file
@@ -170,7 +170,7 @@ install Kubectl
 
 echo "$(cat kubectl.sha256)  kubectl" | sha256sum --check
 
-#Install kubectl
+## install kubectl
 
 sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
 
@@ -179,12 +179,13 @@ mkdir -p ~/.local/bin
 mv ./kubectl ~/.local/bin/kubectl
 # and then append (or prepend) ~/.local/bin to $PATH
 ```
-Test to ensure the version you installed is up-to-date
+---
+## Test to ensure the version you installed is up-to-date
 ```bash
 kubectl version --client
 ```
 
-Connect kubectl with AWS EKS cluster:
+## Connect kubectl with AWS EKS cluster:
 
 ```bash
 aws eks --region ap-south-1 update-kubeconfig --name test-cluster

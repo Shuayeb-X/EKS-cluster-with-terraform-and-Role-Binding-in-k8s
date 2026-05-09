@@ -38,8 +38,7 @@ Run
 ```bash
 terraform apply -auto-approve
 ```
-it will create the eks cluster.
----
+it will create the eks cluster. Before that set up set up AWS CLI and connect with your cloud.
 
 # AWS CLI v2 Installation Guide (Ubuntu/Linux x86_64)
 
